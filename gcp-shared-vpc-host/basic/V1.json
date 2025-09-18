@@ -1,0 +1,13 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.networks.list",
+    "compute.subnetworks.use",
+    "compute.firewalls.list",
+    "compute.subnetworks.useExternalIp"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "COMPUTE_ENGINE_API"
+  ]
+}

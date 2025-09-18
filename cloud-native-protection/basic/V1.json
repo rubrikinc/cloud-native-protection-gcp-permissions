@@ -1,0 +1,31 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.snapshots.create",
+    "compute.snapshots.list",
+    "compute.snapshots.setLabels",
+    "compute.snapshots.useReadOnly",
+    "compute.disks.list",
+    "compute.disks.get",
+    "compute.disks.createSnapshot",
+    "compute.instances.list",
+    "compute.instances.get",
+    "compute.projects.get",
+    "compute.regions.list",
+    "compute.machineTypes.list",
+    "compute.regionOperations.get",
+    "compute.globalOperations.get",
+    "compute.zoneOperations.get",
+    "resourcemanager.projects.get"
+  ],
+  "PermissionsWithConditions": [
+    "compute.snapshots.delete",
+    "compute.snapshots.get"
+  ],
+  "Conditions": [
+    "resource.name.extract('snapshots/{resourceName}').startsWith('rubrik')"
+  ],
+  "Services": [
+    "CLOUD_RESOURCE_MANAGER",
+    "COMPUTE_ENGINE_API"
+  ]
+}

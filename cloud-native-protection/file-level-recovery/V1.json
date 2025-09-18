@@ -1,0 +1,13 @@
+{
+  "PermissionsWithoutConditions": [
+    "storage.buckets.create",
+    "storage.buckets.get",
+    "storage.buckets.list",
+    "storage.objects.create"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "STORAGE"
+  ]
+}
