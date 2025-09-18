@@ -1,0 +1,40 @@
+{
+  "PermissionsWithoutConditions": [
+    "accessapproval.requests.dismiss",
+    "iam.serviceAccounts.list",
+    "compute.disks.create",
+    "compute.globalOperations.get",
+    "compute.images.create",
+    "compute.images.get",
+    "compute.images.getIamPolicy",
+    "compute.images.useReadOnly",
+    "compute.instances.create",
+    "compute.instances.get",
+    "compute.instances.getSerialPortOutput",
+    "compute.instances.setDeletionProtection",
+    "compute.instances.setMetadata",
+    "compute.instances.setServiceAccount",
+    "compute.subnetworks.get",
+    "compute.subnetworks.use",
+    "monitoring.timeSeries.list",
+    "storage.buckets.get",
+    "storage.buckets.list",
+    "storage.objects.create",
+    "storage.objects.delete",
+    "storage.objects.get",
+    "storage.objects.getIamPolicy",
+    "storage.objects.list",
+    "storage.objects.restore",
+    "storage.objects.setRetention",
+    "storage.objects.update"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "IAM",
+    "COMPUTE_ENGINE_API",
+    "MONITORING",
+    "STORAGE",
+    "ACCESS_APPROVAL"
+  ]
+}

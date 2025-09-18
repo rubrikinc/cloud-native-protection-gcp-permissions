@@ -1,0 +1,11 @@
+{
+  "PermissionsWithoutConditions": [
+    "cloudkms.cryptoKeys.list",
+    "cloudkms.keyRings.list"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "CLOUDKMS"
+  ]
+}
