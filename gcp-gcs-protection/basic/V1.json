@@ -1,0 +1,18 @@
+{
+  "PermissionsWithoutConditions": [
+    "monitoring.timeSeries.list",
+    "resourcemanager.projects.get",
+    "storage.buckets.get",
+    "storage.buckets.list",
+    "storage.managedFolders.get",
+    "storage.managedFolders.list",
+    "storage.objects.get",
+    "storage.objects.list"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "MONITORING",
+    "STORAGE"
+  ]
+}

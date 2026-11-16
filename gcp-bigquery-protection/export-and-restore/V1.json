@@ -1,0 +1,35 @@
+{
+  "PermissionsWithoutConditions": [
+    "bigquery.datasets.create",
+    "bigquery.datasets.delete",
+    "bigquery.datasets.update",
+    "bigquery.models.create",
+    "bigquery.models.delete",
+    "bigquery.models.updateData",
+    "bigquery.models.updateMetadata",
+    "bigquery.propertyGraphs.create",
+    "bigquery.propertyGraphs.delete",
+    "bigquery.propertyGraphs.update",
+    "bigquery.routines.create",
+    "bigquery.routines.delete",
+    "bigquery.routines.update",
+    "bigquery.rowAccessPolicies.create",
+    "bigquery.rowAccessPolicies.delete",
+    "bigquery.rowAccessPolicies.setIamPolicy",
+    "bigquery.rowAccessPolicies.update",
+    "bigquery.tables.create",
+    "bigquery.tables.createIndex",
+    "bigquery.tables.delete",
+    "bigquery.tables.deleteIndex",
+    "bigquery.tables.deleteSnapshot",
+    "bigquery.tables.restoreSnapshot",
+    "bigquery.tables.update",
+    "bigquery.tables.updateData",
+    "bigquery.tables.updateIndex"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "BIGQUERY"
+  ]
+}

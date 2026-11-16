@@ -1,0 +1,16 @@
+{
+  "PermissionsWithoutConditions": [
+    "storage.buckets.create",
+    "storage.multipartUploads.abort",
+    "storage.multipartUploads.create",
+    "storage.multipartUploads.listParts",
+    "storage.objects.create",
+    "storage.objects.delete",
+    "storage.objects.update"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "STORAGE"
+  ]
+}
