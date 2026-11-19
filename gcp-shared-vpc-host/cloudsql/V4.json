@@ -1,0 +1,17 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.globalAddresses.createInternal",
+    "compute.networks.use",
+    "servicenetworking.services.addPeering",
+    "servicenetworking.services.get",
+    "compute.globalAddresses.deleteInternal",
+    "servicenetworking.services.deleteConnection",
+    "compute.networks.removePeering",
+    "compute.globalAddresses.get"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "SERVICE_NETWORKING"
+  ]
+}

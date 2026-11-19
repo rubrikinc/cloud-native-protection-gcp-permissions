@@ -1,0 +1,17 @@
+{
+  "PermissionsWithoutConditions": [
+    "cloudsql.backupRuns.create",
+    "cloudsql.backupRuns.delete",
+    "cloudsql.backupRuns.get",
+    "cloudsql.backupRuns.list",
+    "cloudsql.instances.get",
+    "cloudsql.instances.list",
+    "cloudsql.operations.get",
+    "resourcemanager.projects.get"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "SQLADMIN"
+  ]
+}

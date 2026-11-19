@@ -1,0 +1,29 @@
+{
+  "PermissionsWithoutConditions": [
+    "storage.buckets.create",
+    "storage.buckets.enableObjectRetention",
+    "storage.buckets.get",
+    "storage.buckets.update",
+    "storage.objects.create",
+    "storage.objects.delete",
+    "storage.objects.get",
+    "storage.objects.list",
+    "storage.objects.setRetention",
+    "storage.objects.update",
+    "storage.multipartUploads.abort",
+    "storage.multipartUploads.create",
+    "storage.multipartUploads.list",
+    "storage.multipartUploads.listParts"
+  ],
+  "PermissionsWithConditions": [
+    "storage.buckets.exemptFromIpFilter",
+    "storage.buckets.getIpFilter",
+    "storage.buckets.setIpFilter"
+  ],
+  "Conditions": [
+    "resource.name.extract('buckets/{resourceName}').startsWith('rubrik')"
+  ],
+  "Services": [
+    "STORAGE"
+  ]
+}

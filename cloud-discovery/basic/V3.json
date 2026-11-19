@@ -1,0 +1,21 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.disks.list",
+    "compute.instances.list",
+    "resourcemanager.projects.get",
+    "cloudsql.instances.list",
+    "bigquery.datasets.get",
+    "bigquery.jobs.create",
+    "bigquery.propertyGraphs.list",
+    "bigquery.routines.list",
+    "bigquery.tables.get",
+    "bigquery.tables.list"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "BIGQUERY",
+    "COMPUTE_ENGINE_API",
+    "SQLADMIN"
+  ]
+}

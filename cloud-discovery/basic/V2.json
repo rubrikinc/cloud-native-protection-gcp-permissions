@@ -1,0 +1,14 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.disks.list",
+    "compute.instances.list",
+    "resourcemanager.projects.get",
+    "cloudsql.instances.list"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "COMPUTE_ENGINE_API",
+    "SQLADMIN"
+  ]
+}

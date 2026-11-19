@@ -1,8 +1,8 @@
 {
   "PermissionsWithoutConditions": [
+    "compute.firewalls.list",
     "compute.networks.list",
     "compute.subnetworks.use",
-    "compute.firewalls.list",
     "compute.subnetworks.useExternalIp"
   ],
   "PermissionsWithConditions": null,

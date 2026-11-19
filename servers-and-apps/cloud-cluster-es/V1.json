@@ -1,7 +1,6 @@
 {
   "PermissionsWithoutConditions": [
     "accessapproval.requests.dismiss",
-    "iam.serviceAccounts.list",
     "compute.disks.create",
     "compute.globalOperations.get",
     "compute.images.create",
@@ -16,6 +15,7 @@
     "compute.instances.setServiceAccount",
     "compute.subnetworks.get",
     "compute.subnetworks.use",
+    "iam.serviceAccounts.list",
     "monitoring.timeSeries.list",
     "storage.buckets.get",
     "storage.buckets.list",
@@ -31,10 +31,10 @@
   "PermissionsWithConditions": null,
   "Conditions": null,
   "Services": [
-    "IAM",
+    "ACCESS_APPROVAL",
     "COMPUTE_ENGINE_API",
+    "IAM",
     "MONITORING",
-    "STORAGE",
-    "ACCESS_APPROVAL"
+    "STORAGE"
   ]
 }

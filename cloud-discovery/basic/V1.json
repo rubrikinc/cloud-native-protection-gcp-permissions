@@ -1,0 +1,12 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.disks.list",
+    "compute.instances.list",
+    "resourcemanager.projects.get"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "COMPUTE_ENGINE_API"
+  ]
+}

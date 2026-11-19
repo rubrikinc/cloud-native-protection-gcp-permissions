@@ -1,10 +1,13 @@
 {
   "PermissionsWithoutConditions": [
+    "cloudkms.cryptoKeys.list",
+    "cloudkms.keyRings.list",
     "compute.disks.create",
     "compute.disks.delete",
     "compute.disks.setLabels",
     "compute.disks.use",
     "compute.disks.useReadOnly",
+    "compute.firewalls.list",
     "compute.instances.attachDisk",
     "compute.instances.create",
     "compute.instances.delete",
@@ -14,13 +17,10 @@
     "compute.instances.setTags",
     "compute.instances.start",
     "compute.instances.stop",
+    "compute.networks.list",
     "compute.subnetworks.use",
     "compute.subnetworks.useExternalIp",
-    "compute.firewalls.list",
-    "compute.networks.list",
-    "iam.serviceAccounts.actAs",
-    "cloudkms.cryptoKeys.list",
-    "cloudkms.keyRings.list"
+    "iam.serviceAccounts.actAs"
   ],
   "PermissionsWithConditions": null,
   "Conditions": null,

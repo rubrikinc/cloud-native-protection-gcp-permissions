@@ -1,0 +1,16 @@
+{
+  "PermissionsWithoutConditions": [
+    "cloudkms.cryptoKeys.list",
+    "cloudkms.keyRings.list",
+    "cloudsql.instances.create",
+    "cloudsql.instances.delete",
+    "cloudsql.instances.get",
+    "cloudsql.instances.update",
+    "iam.serviceAccounts.actAs"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "SQLADMIN"
+  ]
+}
