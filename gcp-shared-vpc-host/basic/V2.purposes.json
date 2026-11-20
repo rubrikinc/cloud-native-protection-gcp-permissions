@@ -1,0 +1,17 @@
+{
+  "compute.firewalls.list": [
+    "To list the firewall rules of the host network, so the connectivity an exocompute cluster needs can be checked."
+  ],
+  "compute.networks.list": [
+    "To list the shared VPC networks a customer can run exocompute on."
+  ],
+  "compute.subnetworks.list": [
+    "To list the subnets of the host network, so their secondary range names can be read for manual networking setup."
+  ],
+  "compute.subnetworks.use": [
+    "To use a subnet of the host network for the exocompute cluster."
+  ],
+  "compute.subnetworks.useExternalIp": [
+    "To use an external address on that subnet, so the cluster can reach services outside the network."
+  ]
+}
