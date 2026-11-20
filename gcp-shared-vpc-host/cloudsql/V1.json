@@ -1,0 +1,13 @@
+{
+  "PermissionsWithoutConditions": [
+    "compute.globalAddresses.createInternal",
+    "compute.networks.use",
+    "servicenetworking.services.addPeering",
+    "servicenetworking.services.get"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "SERVICE_NETWORKING"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "cloudsql.backupRuns.create": [
+    "To create an on-demand backup of an instance."
+  ],
+  "cloudsql.backupRuns.delete": [
+    "To delete a backup once its snapshot expires."
+  ],
+  "cloudsql.backupRuns.get": [
+    "To get the status and details of a backup."
+  ],
+  "cloudsql.backupRuns.list": [
+    "To list the backups of an instance."
+  ],
+  "cloudsql.instances.get": [
+    "To get the configuration of an instance, so a backup records its settings."
+  ],
+  "cloudsql.instances.list": [
+    "To list the instances in a project, so they can be discovered and protected."
+  ],
+  "resourcemanager.projects.get": [
+    "To get the project, so its metadata can be resolved."
+  ]
+}

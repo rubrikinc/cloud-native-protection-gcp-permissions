@@ -1,0 +1,44 @@
+{
+  "storage.buckets.create": [
+    "To create the bucket that archived data is written to."
+  ],
+  "storage.buckets.enableObjectRetention": [
+    "To set object retention on the bucket, so each archived object can carry a retention time of its own."
+  ],
+  "storage.buckets.get": [
+    "To get metadata of the bucket."
+  ],
+  "storage.buckets.update": [
+    "To update configuration of the bucket."
+  ],
+  "storage.multipartUploads.abort": [
+    "To cancel a multipart upload that did not finish, so its parts stop occupying the bucket."
+  ],
+  "storage.multipartUploads.create": [
+    "To create a multipart upload for writing a large archived object."
+  ],
+  "storage.multipartUploads.list": [
+    "To list the multipart uploads in progress in the bucket."
+  ],
+  "storage.multipartUploads.listParts": [
+    "To list the parts already uploaded for a multipart upload."
+  ],
+  "storage.objects.create": [
+    "To create each archived object in the bucket."
+  ],
+  "storage.objects.delete": [
+    "To delete an archived object once its retention has passed."
+  ],
+  "storage.objects.get": [
+    "To get data of each archived object when reading a backup back."
+  ],
+  "storage.objects.list": [
+    "To list archived objects in the bucket."
+  ],
+  "storage.objects.setRetention": [
+    "To set the retention of each archived object, so it cannot be deleted before it expires."
+  ],
+  "storage.objects.update": [
+    "To update metadata of each archived object."
+  ]
+}

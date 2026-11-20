@@ -1,0 +1,23 @@
+{
+  "bigquery.reservations.create": [
+    "To create the Rubrik-managed reservation that backup and recovery jobs run on."
+  ],
+  "bigquery.reservations.delete": [
+    "To delete the Rubrik-managed reservation once no job needs it."
+  ],
+  "bigquery.reservations.get": [
+    "To get state of the Rubrik-managed reservation."
+  ],
+  "bigquery.reservations.list": [
+    "To list reservations in the project."
+  ],
+  "bigquery.reservations.update": [
+    "To update slot capacity of the Rubrik-managed reservation."
+  ],
+  "bigquery.reservations.use": [
+    "To use the Rubrik-managed reservation for running backup and recovery jobs."
+  ],
+  "cloudquotas.quotas.get": [
+    "To get the slot quota of the project, so a reservation stays within it."
+  ]
+}

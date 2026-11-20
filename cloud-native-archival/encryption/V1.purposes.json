@@ -1,0 +1,8 @@
+{
+  "cloudkms.cryptoKeys.list": [
+    "To list the keys in each key ring, so a customer can choose one for encrypting an archival location."
+  ],
+  "cloudkms.keyRings.list": [
+    "To list key rings in the project."
+  ]
+}

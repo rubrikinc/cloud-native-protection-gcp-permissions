@@ -1,0 +1,23 @@
+{
+  "cloudkms.cryptoKeys.list": [
+    "To list the encryption keys that can protect the new instance."
+  ],
+  "cloudkms.keyRings.list": [
+    "To list the key rings that hold those encryption keys."
+  ],
+  "cloudsql.instances.create": [
+    "To create the new instance that receives the restored data."
+  ],
+  "cloudsql.instances.delete": [
+    "To delete an instance, so a failed export can be cleaned up."
+  ],
+  "cloudsql.instances.get": [
+    "To get an instance, so its state can be checked during a restore."
+  ],
+  "cloudsql.instances.update": [
+    "To update the new instance, so its settings match the source."
+  ],
+  "iam.serviceAccounts.actAs": [
+    "To attach a custom service account to the new instance."
+  ]
+}

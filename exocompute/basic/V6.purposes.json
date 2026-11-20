@@ -1,0 +1,35 @@
+{
+  "compute.instances.create": [
+    "To create the health check instance."
+  ],
+  "compute.instances.delete": [
+    "To delete the health check instance once the check finishes."
+  ],
+  "compute.instances.getSerialPortOutput": [
+    "To get the health check results from the instance's serial port."
+  ],
+  "compute.instances.setMetadata": [
+    "To set the health check scripts as the instance's startup script."
+  ],
+  "compute.subnetworks.use": [
+    "To attach the health check instance to the exocompute subnet."
+  ],
+  "compute.zones.list": [
+    "To list zones in the region for the health check instance."
+  ],
+  "run.operations.get": [
+    "To get the state of Cloud Run operations."
+  ],
+  "run.routes.invoke": [
+    "To invoke Cloud Run to apply Kubernetes YAML to the private cluster."
+  ],
+  "run.services.create": [
+    "To create Cloud Run that can reach the private cluster endpoint."
+  ],
+  "run.services.delete": [
+    "To delete Cloud Run once cluster setup finishes."
+  ],
+  "run.services.get": [
+    "To get the state of Cloud Run."
+  ]
+}

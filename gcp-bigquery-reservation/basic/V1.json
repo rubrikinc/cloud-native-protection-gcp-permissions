@@ -1,0 +1,20 @@
+{
+  "PermissionsWithoutConditions": [
+    "bigquery.reservations.list",
+    "cloudquotas.quotas.get"
+  ],
+  "PermissionsWithConditions": [
+    "bigquery.reservations.create",
+    "bigquery.reservations.delete",
+    "bigquery.reservations.get",
+    "bigquery.reservations.update",
+    "bigquery.reservations.use"
+  ],
+  "Conditions": [
+    "resource.name.extract('reservations/{resourceName}').startsWith('rubrik')"
+  ],
+  "Services": [
+    "BIGQUERY_RESERVATION",
+    "CLOUD_QUOTAS"
+  ]
+}

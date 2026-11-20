@@ -1,0 +1,29 @@
+{
+  "PermissionsWithoutConditions": [
+    "cloudsql.backupRuns.get",
+    "cloudsql.instances.restoreBackup",
+    "cloudsql.operations.get",
+    "cloudsql.users.update",
+    "compute.globalAddresses.createInternal",
+    "compute.networks.use",
+    "servicenetworking.services.addPeering",
+    "servicenetworking.services.get",
+    "cloudsql.users.create",
+    "compute.globalAddresses.deleteInternal",
+    "servicenetworking.services.deleteConnection"
+  ],
+  "PermissionsWithConditions": [
+    "cloudsql.backupRuns.create",
+    "cloudsql.backupRuns.delete",
+    "cloudsql.instances.create",
+    "cloudsql.instances.delete",
+    "cloudsql.instances.get"
+  ],
+  "Conditions": [
+    "resource.name.extract('instances/{resourceName}').startsWith('rubrik')"
+  ],
+  "Services": [
+    "SERVICE_NETWORKING",
+    "SQLADMIN"
+  ]
+}

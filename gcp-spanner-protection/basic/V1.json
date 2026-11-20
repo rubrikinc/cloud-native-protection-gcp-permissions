@@ -1,0 +1,15 @@
+{
+  "PermissionsWithoutConditions": [
+    "resourcemanager.projects.get",
+    "spanner.databases.get",
+    "spanner.databases.list",
+    "spanner.instanceConfigs.get",
+    "spanner.instances.get",
+    "spanner.instances.list"
+  ],
+  "PermissionsWithConditions": null,
+  "Conditions": null,
+  "Services": [
+    "SPANNER"
+  ]
+}
