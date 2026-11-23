@@ -1,21 +1,41 @@
 {
-  "PermissionsWithoutConditions": [
-    "compute.disks.list",
-    "compute.instances.list",
-    "resourcemanager.projects.get",
-    "cloudsql.instances.list",
-    "bigquery.datasets.get",
-    "bigquery.jobs.create",
-    "bigquery.propertyGraphs.list",
-    "bigquery.routines.list",
-    "bigquery.tables.get",
-    "bigquery.tables.list"
-  ],
+  "PermissionsWithoutConditions": {
+    "bigquery.datasets.get": [
+      "To get metadata of each dataset, so it can be discovered."
+    ],
+    "bigquery.jobs.create": [
+      "To create jobs for running discovery queries."
+    ],
+    "bigquery.propertyGraphs.list": [
+      "To list graphs in each dataset."
+    ],
+    "bigquery.routines.list": [
+      "To list routines in each dataset."
+    ],
+    "bigquery.tables.get": [
+      "To get metadata of each table."
+    ],
+    "bigquery.tables.list": [
+      "To list tables in each dataset."
+    ],
+    "cloudsql.instances.list": [
+      "To list the Cloud SQL instances in the project, so they can be discovered."
+    ],
+    "compute.disks.list": [
+      "To list the disks in the project, so they can be discovered."
+    ],
+    "compute.instances.list": [
+      "To list the VM instances in the project, so they can be discovered."
+    ],
+    "resourcemanager.projects.get": [
+      "To get metadata of the project being discovered."
+    ]
+  },
   "PermissionsWithConditions": null,
   "Conditions": null,
   "Services": [
-    "BIGQUERY",
     "COMPUTE_ENGINE_API",
-    "SQLADMIN"
+    "SQLADMIN",
+    "BIGQUERY"
   ]
 }

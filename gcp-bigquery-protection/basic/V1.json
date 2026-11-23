@@ -1,32 +1,81 @@
 {
-  "PermissionsWithoutConditions": [
-    "bigquery.datasets.get",
-    "bigquery.jobs.create",
-    "bigquery.jobs.get",
-    "bigquery.jobs.update",
-    "bigquery.models.export",
-    "bigquery.models.getData",
-    "bigquery.models.getMetadata",
-    "bigquery.models.list",
-    "bigquery.propertyGraphs.get",
-    "bigquery.propertyGraphs.list",
-    "bigquery.routines.get",
-    "bigquery.routines.list",
-    "bigquery.rowAccessPolicies.getIamPolicy",
-    "bigquery.rowAccessPolicies.list",
-    "bigquery.tables.createSnapshot",
-    "bigquery.tables.export",
-    "bigquery.tables.get",
-    "bigquery.tables.getData",
-    "bigquery.tables.list",
-    "resourcemanager.projects.get"
-  ],
-  "PermissionsWithConditions": [
-    "bigquery.tables.create",
-    "bigquery.tables.delete",
-    "bigquery.tables.deleteSnapshot",
-    "bigquery.tables.updateData"
-  ],
+  "PermissionsWithoutConditions": {
+    "bigquery.datasets.get": [
+      "To list datasets in the project.",
+      "To get the metadata of each dataset."
+    ],
+    "bigquery.jobs.create": [
+      "To create jobs for running queries for backup and refresh."
+    ],
+    "bigquery.jobs.get": [
+      "To get the state of running jobs."
+    ],
+    "bigquery.jobs.update": [
+      "To cancel running jobs."
+    ],
+    "bigquery.models.export": [
+      "To export data of each model to backup location."
+    ],
+    "bigquery.models.getData": [
+      "To get data of each model."
+    ],
+    "bigquery.models.getMetadata": [
+      "To get metadata of each model."
+    ],
+    "bigquery.models.list": [
+      "To list models in each dataset."
+    ],
+    "bigquery.propertyGraphs.get": [
+      "To get definition of each graph."
+    ],
+    "bigquery.propertyGraphs.list": [
+      "To list graphs in each dataset."
+    ],
+    "bigquery.routines.get": [
+      "To get definition of each routine."
+    ],
+    "bigquery.routines.list": [
+      "To list routines in each dataset."
+    ],
+    "bigquery.rowAccessPolicies.getIamPolicy": [
+      "To get the IAM policy of each row access policy, so the backup captures who it grants access to."
+    ],
+    "bigquery.rowAccessPolicies.list": [
+      "To list row access policies on each table."
+    ],
+    "bigquery.tables.createSnapshot": [
+      "To create a snapshot of each table, giving the backup a consistent view of its data."
+    ],
+    "bigquery.tables.export": [
+      "To export data of each table to backup location."
+    ],
+    "bigquery.tables.get": [
+      "To get metadata of each table."
+    ],
+    "bigquery.tables.getData": [
+      "To get data of each table."
+    ],
+    "bigquery.tables.list": [
+      "To list tables in each dataset."
+    ],
+    "resourcemanager.projects.get": [
+      "To get metadata of the project being protected."
+    ]
+  },
+  "PermissionsWithConditions": {
+    "bigquery.tables.create": [
+      "To create the Rubrik-managed table snapshot a backup writes through."
+    ],
+    "bigquery.tables.delete": [
+      "To delete the Rubrik-managed table snapshot once a backup finishes with them."
+    ],
+    "bigquery.tables.deleteSnapshot": [
+      "To delete each Rubrik-managed table snapshot once its data is backed up."
+    ],
+    "bigquery.tables.updateData": [
+      "To write data into the Rubrik-managed table snapshot a backup reads from."
+    ]
+  },
   "Conditions": [
     "(resource.name.extract('tables/{resourceName}').startsWith('rubrik') \u0026\u0026 resource.type == 'bigquery.googleapis.com/Table')"
   ],

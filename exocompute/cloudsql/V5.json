@@ -1,32 +1,32 @@
 {
-  "PermissionsWithoutConditions": [
-    "cloudsql.backupRuns.get",
-    "cloudsql.instances.restoreBackup",
-    "cloudsql.operations.get",
-    "cloudsql.users.update",
-    "compute.globalAddresses.createInternal",
-    "compute.networks.use",
-    "servicenetworking.services.addPeering",
-    "servicenetworking.services.get",
-    "cloudsql.users.create",
-    "compute.globalAddresses.deleteInternal",
-    "servicenetworking.services.deleteConnection",
-    "compute.networks.removePeering",
-    "compute.globalAddresses.get"
-  ],
-  "PermissionsWithConditions": [
-    "cloudsql.backupRuns.create",
-    "cloudsql.backupRuns.delete",
-    "cloudsql.instances.create",
-    "cloudsql.instances.delete",
-    "cloudsql.instances.get",
-    "cloudsql.instances.update"
-  ],
+  "PermissionsWithoutConditions": {
+    "cloudsql.backupRuns.get": [],
+    "cloudsql.instances.restoreBackup": [],
+    "cloudsql.operations.get": [],
+    "cloudsql.users.create": [],
+    "cloudsql.users.update": [],
+    "compute.globalAddresses.createInternal": [],
+    "compute.globalAddresses.deleteInternal": [],
+    "compute.globalAddresses.get": [],
+    "compute.networks.removePeering": [],
+    "compute.networks.use": [],
+    "servicenetworking.services.addPeering": [],
+    "servicenetworking.services.deleteConnection": [],
+    "servicenetworking.services.get": []
+  },
+  "PermissionsWithConditions": {
+    "cloudsql.backupRuns.create": [],
+    "cloudsql.backupRuns.delete": [],
+    "cloudsql.instances.create": [],
+    "cloudsql.instances.delete": [],
+    "cloudsql.instances.get": [],
+    "cloudsql.instances.update": []
+  },
   "Conditions": [
     "resource.name.extract('instances/{resourceName}').startsWith('rubrik')"
   ],
   "Services": [
-    "SERVICE_NETWORKING",
-    "SQLADMIN"
+    "SQLADMIN",
+    "SERVICE_NETWORKING"
   ]
 }

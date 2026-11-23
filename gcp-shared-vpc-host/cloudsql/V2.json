@@ -1,12 +1,24 @@
 {
-  "PermissionsWithoutConditions": [
-    "compute.globalAddresses.createInternal",
-    "compute.networks.use",
-    "servicenetworking.services.addPeering",
-    "servicenetworking.services.get",
-    "compute.globalAddresses.deleteInternal",
-    "servicenetworking.services.deleteConnection"
-  ],
+  "PermissionsWithoutConditions": {
+    "compute.globalAddresses.createInternal": [
+      "To create the internal address range that private service access allocates on the host network."
+    ],
+    "compute.globalAddresses.deleteInternal": [
+      "To delete the reserved internal address range once private service access is torn down."
+    ],
+    "compute.networks.use": [
+      "To use the host network the private service access connection is made on."
+    ],
+    "servicenetworking.services.addPeering": [
+      "To add the peering that connects the host network to the Cloud SQL service producer network."
+    ],
+    "servicenetworking.services.deleteConnection": [
+      "To delete the private service access connection to the Cloud SQL service producer network."
+    ],
+    "servicenetworking.services.get": [
+      "To get the state of the private service access connection."
+    ]
+  },
   "PermissionsWithConditions": null,
   "Conditions": null,
   "Services": [
