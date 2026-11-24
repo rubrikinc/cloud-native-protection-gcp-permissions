@@ -1,10 +1,18 @@
 {
-  "PermissionsWithoutConditions": [
-    "storage.buckets.create",
-    "storage.buckets.get",
-    "storage.buckets.list",
-    "storage.objects.create"
-  ],
+  "PermissionsWithoutConditions": {
+    "storage.buckets.create": [
+      "To create the bucket that recovered files are staged in."
+    ],
+    "storage.buckets.get": [
+      "To get metadata of the bucket that recovered files are staged in."
+    ],
+    "storage.buckets.list": [
+      "To list the buckets in the project."
+    ],
+    "storage.objects.create": [
+      "To create each recovered file as an object in the bucket."
+    ]
+  },
   "PermissionsWithConditions": null,
   "Conditions": null,
   "Services": [

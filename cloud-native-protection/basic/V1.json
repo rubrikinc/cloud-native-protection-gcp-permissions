@@ -1,26 +1,62 @@
 {
-  "PermissionsWithoutConditions": [
-    "compute.disks.createSnapshot",
-    "compute.disks.get",
-    "compute.disks.list",
-    "compute.globalOperations.get",
-    "compute.instances.get",
-    "compute.instances.list",
-    "compute.machineTypes.list",
-    "compute.projects.get",
-    "compute.regionOperations.get",
-    "compute.regions.list",
-    "compute.snapshots.create",
-    "compute.snapshots.list",
-    "compute.snapshots.setLabels",
-    "compute.snapshots.useReadOnly",
-    "compute.zoneOperations.get",
-    "resourcemanager.projects.get"
-  ],
-  "PermissionsWithConditions": [
-    "compute.snapshots.delete",
-    "compute.snapshots.get"
-  ],
+  "PermissionsWithoutConditions": {
+    "compute.disks.createSnapshot": [
+      "To create a snapshot of each disk of a VM instance."
+    ],
+    "compute.disks.get": [
+      "To get metadata of each disk of a VM instance."
+    ],
+    "compute.disks.list": [
+      "To list the disks in the project."
+    ],
+    "compute.globalOperations.get": [
+      "To get the status of global operations."
+    ],
+    "compute.instances.get": [
+      "To get the configuration of a VM instance, so a backup records its settings."
+    ],
+    "compute.instances.list": [
+      "To list the VM instances in the project, so they can be discovered and protected."
+    ],
+    "compute.machineTypes.list": [
+      "To list the machine types available to VM instances."
+    ],
+    "compute.projects.get": [
+      "To get the Compute Engine metadata of the project."
+    ],
+    "compute.regionOperations.get": [
+      "To get the status of regional operations."
+    ],
+    "compute.regions.list": [
+      "To list the regions in the project."
+    ],
+    "compute.snapshots.create": [
+      "To create a snapshot of each disk of a VM instance."
+    ],
+    "compute.snapshots.list": [
+      "To list the snapshots in the project."
+    ],
+    "compute.snapshots.setLabels": [
+      "To set labels on each snapshot, so Rubrik can identify it."
+    ],
+    "compute.snapshots.useReadOnly": [
+      "To use a snapshot as the read-only source of a disk."
+    ],
+    "compute.zoneOperations.get": [
+      "To get the status of zonal operations, such as creating a snapshot."
+    ],
+    "resourcemanager.projects.get": [
+      "To get metadata of the project being protected."
+    ]
+  },
+  "PermissionsWithConditions": {
+    "compute.snapshots.delete": [
+      "To delete a Rubrik-managed snapshot once it expires."
+    ],
+    "compute.snapshots.get": [
+      "To get the status and details of a Rubrik-managed snapshot."
+    ]
+  },
   "Conditions": [
     "resource.name.extract('snapshots/{resourceName}').startsWith('rubrik')"
   ],

@@ -1,9 +1,15 @@
 {
-  "PermissionsWithoutConditions": [
-    "cloudkms.keyRings.get",
-    "cloudkms.keyRings.list",
-    "cloudkms.locations.list"
-  ],
+  "PermissionsWithoutConditions": {
+    "cloudkms.keyRings.get": [
+      "To get metadata of each key ring."
+    ],
+    "cloudkms.keyRings.list": [
+      "To list the key rings in each location."
+    ],
+    "cloudkms.locations.list": [
+      "To list the locations that hold key rings in the project."
+    ]
+  },
   "PermissionsWithConditions": null,
   "Conditions": null,
   "Services": [

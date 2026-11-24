@@ -1,26 +1,52 @@
 {
-  "PermissionsWithoutConditions": [
-    "cloudsql.backupRuns.get",
-    "cloudsql.instances.restoreBackup",
-    "cloudsql.operations.get",
-    "cloudsql.users.update",
-    "compute.globalAddresses.createInternal",
-    "compute.networks.use",
-    "servicenetworking.services.addPeering",
-    "servicenetworking.services.get"
-  ],
-  "PermissionsWithConditions": [
-    "cloudsql.backupRuns.create",
-    "cloudsql.backupRuns.delete",
-    "cloudsql.instances.create",
-    "cloudsql.instances.delete",
-    "cloudsql.instances.get"
-  ],
+  "PermissionsWithoutConditions": {
+    "cloudsql.backupRuns.get": [
+      "To get the status and details of the backup that is restored into the temporary instance."
+    ],
+    "cloudsql.instances.restoreBackup": [
+      "To restore a backup run into the temporary instance."
+    ],
+    "cloudsql.operations.get": [
+      "To get the status of a long-running operation, such as creating an instance."
+    ],
+    "cloudsql.users.update": [
+      "To update a database user on the temporary instance."
+    ],
+    "compute.globalAddresses.createInternal": [
+      "To create the internal address range that private service access allocates on the network."
+    ],
+    "compute.networks.use": [
+      "To use the network the private service access connection is made on."
+    ],
+    "servicenetworking.services.addPeering": [
+      "To add the peering that connects the network to the Cloud SQL service producer network."
+    ],
+    "servicenetworking.services.get": [
+      "To get the state of the private service access connection."
+    ]
+  },
+  "PermissionsWithConditions": {
+    "cloudsql.backupRuns.create": [
+      "To create a backup of an instance that Rubrik created."
+    ],
+    "cloudsql.backupRuns.delete": [
+      "To delete a backup of an instance that Rubrik created."
+    ],
+    "cloudsql.instances.create": [
+      "To create the temporary instance that a backup is restored into during archival."
+    ],
+    "cloudsql.instances.delete": [
+      "To delete the temporary instance once archival finishes."
+    ],
+    "cloudsql.instances.get": [
+      "To get the temporary instance, so its state and private IP address can be read."
+    ]
+  },
   "Conditions": [
     "resource.name.extract('instances/{resourceName}').startsWith('rubrik')"
   ],
   "Services": [
-    "SERVICE_NETWORKING",
-    "SQLADMIN"
+    "SQLADMIN",
+    "SERVICE_NETWORKING"
   ]
 }

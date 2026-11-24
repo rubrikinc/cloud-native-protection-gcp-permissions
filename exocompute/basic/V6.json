@@ -1,148 +1,412 @@
 {
-  "PermissionsWithoutConditions": [
-    "compute.disks.create",
-    "compute.disks.createSnapshot",
-    "compute.disks.delete",
-    "compute.disks.get",
-    "compute.disks.setLabels",
-    "compute.disks.use",
-    "compute.globalOperations.get",
-    "compute.regionOperations.get",
-    "compute.snapshots.create",
-    "compute.snapshots.delete",
-    "compute.snapshots.get",
-    "compute.snapshots.setLabels",
-    "compute.snapshots.useReadOnly",
-    "compute.zoneOperations.get",
-    "container.clusterRoleBindings.create",
-    "container.clusterRoleBindings.delete",
-    "container.clusterRoleBindings.get",
-    "container.clusterRoleBindings.update",
-    "container.clusterRoles.bind",
-    "container.clusterRoles.create",
-    "container.clusterRoles.delete",
-    "container.clusterRoles.escalate",
-    "container.clusterRoles.get",
-    "container.clusterRoles.update",
-    "container.clusters.create",
-    "container.configMaps.create",
-    "container.configMaps.get",
-    "container.configMaps.list",
-    "container.configMaps.update",
-    "container.daemonSets.create",
-    "container.daemonSets.delete",
-    "container.daemonSets.get",
-    "container.daemonSets.getStatus",
-    "container.daemonSets.update",
-    "container.deployments.create",
-    "container.deployments.delete",
-    "container.deployments.get",
-    "container.deployments.getStatus",
-    "container.deployments.rollback",
-    "container.events.get",
-    "container.events.list",
-    "container.namespaces.create",
-    "container.namespaces.get",
-    "container.namespaces.getStatus",
-    "container.namespaces.list",
-    "container.namespaces.update",
-    "container.namespaces.updateStatus",
-    "container.nodes.create",
-    "container.nodes.delete",
-    "container.nodes.get",
-    "container.nodes.getStatus",
-    "container.nodes.list",
-    "container.operations.get",
-    "container.persistentVolumeClaims.create",
-    "container.persistentVolumeClaims.delete",
-    "container.persistentVolumeClaims.get",
-    "container.persistentVolumeClaims.update",
-    "container.persistentVolumes.create",
-    "container.persistentVolumes.delete",
-    "container.persistentVolumes.get",
-    "container.pods.attach",
-    "container.pods.create",
-    "container.pods.delete",
-    "container.pods.evict",
-    "container.pods.exec",
-    "container.pods.get",
-    "container.pods.getLogs",
-    "container.pods.getStatus",
-    "container.pods.initialize",
-    "container.pods.list",
-    "container.pods.portForward",
-    "container.pods.proxy",
-    "container.pods.update",
-    "container.pods.updateStatus",
-    "container.replicaSets.create",
-    "container.replicaSets.delete",
-    "container.replicaSets.get",
-    "container.replicaSets.getScale",
-    "container.replicaSets.getStatus",
-    "container.replicaSets.list",
-    "container.replicaSets.update",
-    "container.roleBindings.create",
-    "container.roleBindings.delete",
-    "container.roleBindings.get",
-    "container.roleBindings.list",
-    "container.roleBindings.update",
-    "container.roles.bind",
-    "container.roles.create",
-    "container.roles.delete",
-    "container.roles.escalate",
-    "container.roles.get",
-    "container.roles.list",
-    "container.roles.update",
-    "container.secrets.create",
-    "container.secrets.get",
-    "container.secrets.list",
-    "container.secrets.update",
-    "container.serviceAccounts.create",
-    "container.serviceAccounts.get",
-    "container.serviceAccounts.update",
-    "container.services.create",
-    "container.services.get",
-    "container.services.getStatus",
-    "container.services.list",
-    "container.services.update",
-    "iam.serviceAccounts.actAs",
-    "compute.networks.list",
-    "compute.projects.get",
-    "compute.disks.list",
-    "compute.instances.detachDisk",
-    "compute.instances.get",
-    "autoscaling.sites.writeMetrics",
-    "logging.logEntries.create",
-    "monitoring.metricDescriptors.create",
-    "monitoring.metricDescriptors.list",
-    "monitoring.timeSeries.create",
-    "monitoring.timeSeries.list",
-    "compute.subnetworks.use",
-    "compute.zones.list",
-    "run.operations.get",
-    "run.routes.invoke",
-    "run.services.create",
-    "run.services.delete",
-    "run.services.get"
-  ],
-  "PermissionsWithConditions": [
-    "container.clusters.delete",
-    "container.clusters.get",
-    "container.clusters.getCredentials",
-    "container.clusters.update",
-    "compute.instances.create",
-    "compute.instances.delete",
-    "compute.instances.getSerialPortOutput",
-    "compute.instances.setMetadata"
-  ],
+  "PermissionsWithoutConditions": {
+    "autoscaling.sites.writeMetrics": [
+      "To write the autoscaling metrics of the cluster nodes, when a customer service account runs them."
+    ],
+    "compute.disks.create": [
+      "To create a disk from a snapshot, so an exocompute task can read the snapshot data."
+    ],
+    "compute.disks.createSnapshot": [
+      "To create a snapshot of a disk for an archival task."
+    ],
+    "compute.disks.delete": [
+      "To delete the disk of an exocompute task once the task finishes."
+    ],
+    "compute.disks.get": [
+      "To get a disk by name, so a unique name is chosen for a new disk."
+    ],
+    "compute.disks.list": [
+      "To list the disks in the project, as part of detaching a disk from an instance."
+    ],
+    "compute.disks.setLabels": [
+      "To set labels on a disk, so Rubrik can identify it."
+    ],
+    "compute.disks.use": [
+      "To use a disk, so it can be attached to an instance."
+    ],
+    "compute.globalOperations.get": [
+      "To get the status of global operations, such as creating a network."
+    ],
+    "compute.instances.detachDisk": [
+      "To detach a disk that is still attached to an instance, so the disk can be deleted."
+    ],
+    "compute.instances.get": [
+      "To get the instance a disk is attached to, so the disk can be detached before it is deleted."
+    ],
+    "compute.networks.list": [
+      "To list the VPC networks that exocompute can be set up on."
+    ],
+    "compute.projects.get": [
+      "To get the project, so the host project of a shared VPC can be found."
+    ],
+    "compute.regionOperations.get": [
+      "To get the status of regional operations, such as creating a subnet."
+    ],
+    "compute.snapshots.create": [
+      "To create a snapshot of a disk for an archival task."
+    ],
+    "compute.snapshots.delete": [
+      "To delete a snapshot that an archival task created."
+    ],
+    "compute.snapshots.get": [
+      "To get the status and details of a snapshot that an archival task uses."
+    ],
+    "compute.snapshots.setLabels": [
+      "To set labels on a snapshot, so Rubrik can identify it."
+    ],
+    "compute.snapshots.useReadOnly": [
+      "To use a snapshot as the read-only source of a disk."
+    ],
+    "compute.subnetworks.use": [
+      "To attach the health check instance to the exocompute subnet."
+    ],
+    "compute.zoneOperations.get": [
+      "To get the status of zonal operations, such as creating a disk."
+    ],
+    "compute.zones.list": [
+      "To list zones in the region for the health check instance."
+    ],
+    "container.clusterRoleBindings.create": [
+      "To create the cluster role bindings that give the logging and metrics agents cluster-wide access."
+    ],
+    "container.clusterRoleBindings.delete": [
+      "To delete a cluster role binding that exocompute created."
+    ],
+    "container.clusterRoleBindings.get": [
+      "To get a cluster role binding, so it can be reused or checked."
+    ],
+    "container.clusterRoleBindings.update": [
+      "To update a cluster role binding that exocompute created."
+    ],
+    "container.clusterRoles.bind": [
+      "To bind a cluster role that grants more access than Rubrik holds itself."
+    ],
+    "container.clusterRoles.create": [
+      "To create the cluster roles that the logging and metrics agents use."
+    ],
+    "container.clusterRoles.delete": [
+      "To delete a cluster role that exocompute created."
+    ],
+    "container.clusterRoles.escalate": [
+      "To create cluster roles whose rules exceed the access Rubrik holds itself."
+    ],
+    "container.clusterRoles.get": [
+      "To get a cluster role, so it can be reused or checked."
+    ],
+    "container.clusterRoles.update": [
+      "To update a cluster role that exocompute created."
+    ],
+    "container.clusters.create": [
+      "To create the GKE cluster that runs exocompute."
+    ],
+    "container.configMaps.create": [
+      "To create the config maps of the logging and metrics agents."
+    ],
+    "container.configMaps.get": [
+      "To get a config map, so it can be reused or checked."
+    ],
+    "container.configMaps.list": [
+      "To list the config maps in a namespace."
+    ],
+    "container.configMaps.update": [
+      "To update a config map that exocompute created."
+    ],
+    "container.daemonSets.create": [
+      "To create the daemon sets that run the logging and metrics agents on every node."
+    ],
+    "container.daemonSets.delete": [
+      "To delete a daemon set that exocompute created."
+    ],
+    "container.daemonSets.get": [
+      "To get a daemon set, so it can be reused or checked."
+    ],
+    "container.daemonSets.getStatus": [
+      "To get the rollout status of a daemon set."
+    ],
+    "container.daemonSets.update": [
+      "To update a daemon set that exocompute created."
+    ],
+    "container.deployments.create": [
+      "To create the deployments of the logging and metrics agents."
+    ],
+    "container.deployments.delete": [
+      "To delete a deployment that exocompute created."
+    ],
+    "container.deployments.get": [
+      "To get a deployment, so it can be reused or checked."
+    ],
+    "container.deployments.getStatus": [
+      "To get the rollout status of a deployment."
+    ],
+    "container.deployments.rollback": [
+      "To restore a previous revision of a deployment."
+    ],
+    "container.events.get": [
+      "To get a Kubernetes event, so a failure can be explained."
+    ],
+    "container.events.list": [
+      "To list the Kubernetes events of pods, nodes and namespaces, so failures can be explained."
+    ],
+    "container.namespaces.create": [
+      "To create the namespaces that hold exocompute workloads."
+    ],
+    "container.namespaces.get": [
+      "To get a namespace, so it can be reused or checked."
+    ],
+    "container.namespaces.getStatus": [
+      "To get the status of a namespace."
+    ],
+    "container.namespaces.list": [
+      "To list the namespaces in the cluster."
+    ],
+    "container.namespaces.update": [
+      "To update a namespace that exocompute created."
+    ],
+    "container.namespaces.updateStatus": [
+      "To update the status of a namespace."
+    ],
+    "container.nodes.create": [
+      "To create node objects in the cluster."
+    ],
+    "container.nodes.delete": [
+      "To delete a node object from the cluster."
+    ],
+    "container.nodes.get": [
+      "To get a node, so the health check can check its state."
+    ],
+    "container.nodes.getStatus": [
+      "To get the status of a node, so the health check can check it."
+    ],
+    "container.nodes.list": [
+      "To list the nodes of the cluster, so the health check can count them."
+    ],
+    "container.operations.get": [
+      "To get the status of GKE operations, such as creating or deleting a cluster."
+    ],
+    "container.persistentVolumeClaims.create": [
+      "To create the volume claim that gives the pod of an exocompute task its storage."
+    ],
+    "container.persistentVolumeClaims.delete": [
+      "To delete the volume claim of an exocompute task once the task finishes."
+    ],
+    "container.persistentVolumeClaims.get": [
+      "To get a volume claim, so its state can be checked."
+    ],
+    "container.persistentVolumeClaims.update": [
+      "To update a volume claim that exocompute created."
+    ],
+    "container.persistentVolumes.create": [
+      "To create the persistent volume that attaches the disk of an exocompute task to its pod."
+    ],
+    "container.persistentVolumes.delete": [
+      "To delete the persistent volume of an exocompute task once the task finishes."
+    ],
+    "container.persistentVolumes.get": [
+      "To get a persistent volume, so its state can be checked."
+    ],
+    "container.pods.attach": [
+      "To attach to a running pod."
+    ],
+    "container.pods.create": [
+      "To create the pods that run exocompute tasks, such as archival."
+    ],
+    "container.pods.delete": [
+      "To delete a pod once its workload finishes."
+    ],
+    "container.pods.evict": [
+      "To remove a pod from a node by evicting it."
+    ],
+    "container.pods.exec": [
+      "To access a running pod, so commands can be run in it."
+    ],
+    "container.pods.get": [
+      "To get a pod, so its state can be checked."
+    ],
+    "container.pods.getLogs": [
+      "To get the logs of a pod."
+    ],
+    "container.pods.getStatus": [
+      "To get the status of a pod."
+    ],
+    "container.pods.initialize": [
+      "To set the initializers of a pod, a Kubernetes feature that has been removed."
+    ],
+    "container.pods.list": [
+      "To list the pods in a namespace, so their state can be checked."
+    ],
+    "container.pods.portForward": [
+      "To use port forwarding to reach a pod."
+    ],
+    "container.pods.proxy": [
+      "To access a pod through the Kubernetes API proxy."
+    ],
+    "container.pods.update": [
+      "To update a pod that exocompute created."
+    ],
+    "container.pods.updateStatus": [
+      "To update the status of a pod."
+    ],
+    "container.replicaSets.create": [
+      "To create a replica set."
+    ],
+    "container.replicaSets.delete": [
+      "To delete a replica set that exocompute created."
+    ],
+    "container.replicaSets.get": [
+      "To get a replica set, so its state can be checked."
+    ],
+    "container.replicaSets.getScale": [
+      "To get the replica count of a replica set."
+    ],
+    "container.replicaSets.getStatus": [
+      "To get the status of a replica set."
+    ],
+    "container.replicaSets.list": [
+      "To list the replica sets in a namespace."
+    ],
+    "container.replicaSets.update": [
+      "To update a replica set that exocompute created."
+    ],
+    "container.roleBindings.create": [
+      "To create the role bindings that give exocompute and its logging and metrics agents access in a namespace."
+    ],
+    "container.roleBindings.delete": [
+      "To delete a role binding that exocompute created."
+    ],
+    "container.roleBindings.get": [
+      "To get a role binding, so it can be reused or checked."
+    ],
+    "container.roleBindings.list": [
+      "To list the role bindings in a namespace."
+    ],
+    "container.roleBindings.update": [
+      "To update a role binding that exocompute created."
+    ],
+    "container.roles.bind": [
+      "To bind a role that grants more access than Rubrik holds itself."
+    ],
+    "container.roles.create": [
+      "To create the roles that give exocompute and its logging and metrics agents access in a namespace."
+    ],
+    "container.roles.delete": [
+      "To delete a role that exocompute created."
+    ],
+    "container.roles.escalate": [
+      "To create roles whose rules exceed the access Rubrik holds itself."
+    ],
+    "container.roles.get": [
+      "To get a role, so it can be reused or checked."
+    ],
+    "container.roles.list": [
+      "To list the roles in a namespace."
+    ],
+    "container.roles.update": [
+      "To update a role that exocompute created."
+    ],
+    "container.secrets.create": [
+      "To create the secrets that exocompute needs, such as credentials."
+    ],
+    "container.secrets.get": [
+      "To get a secret, so it can be reused or checked."
+    ],
+    "container.secrets.list": [
+      "To list the secrets in a namespace."
+    ],
+    "container.secrets.update": [
+      "To update a secret that exocompute created."
+    ],
+    "container.serviceAccounts.create": [
+      "To create the Kubernetes service account that exocompute pods use through workload identity."
+    ],
+    "container.serviceAccounts.get": [
+      "To get a service account, so it can be reused or checked."
+    ],
+    "container.serviceAccounts.update": [
+      "To update a service account that exocompute created."
+    ],
+    "container.services.create": [
+      "To create the services of the logging and metrics agents."
+    ],
+    "container.services.get": [
+      "To get a service, so it can be reused or checked."
+    ],
+    "container.services.getStatus": [
+      "To get the status of a service."
+    ],
+    "container.services.list": [
+      "To list the services in a namespace."
+    ],
+    "container.services.update": [
+      "To update a service that exocompute created."
+    ],
+    "iam.serviceAccounts.actAs": [
+      "To use the node service account, so GKE can launch the cluster nodes as it."
+    ],
+    "logging.logEntries.create": [
+      "To write the logs of the cluster nodes to Cloud Logging, when a customer service account runs them."
+    ],
+    "monitoring.metricDescriptors.create": [
+      "To create the metric descriptors of the cluster nodes, when a customer service account runs them."
+    ],
+    "monitoring.metricDescriptors.list": [
+      "To list the metric descriptors of the cluster nodes, when a customer service account runs them."
+    ],
+    "monitoring.timeSeries.create": [
+      "To write the metrics of the cluster nodes to Cloud Monitoring, when a customer service account runs them."
+    ],
+    "monitoring.timeSeries.list": [
+      "To list the metrics of the cluster nodes, when a customer service account runs them."
+    ],
+    "run.operations.get": [
+      "To get the state of Cloud Run operations."
+    ],
+    "run.routes.invoke": [
+      "To invoke Cloud Run to apply Kubernetes YAML to the private cluster."
+    ],
+    "run.services.create": [
+      "To create Cloud Run that can reach the private cluster endpoint."
+    ],
+    "run.services.delete": [
+      "To delete Cloud Run once cluster setup finishes."
+    ],
+    "run.services.get": [
+      "To get the state of Cloud Run."
+    ]
+  },
+  "PermissionsWithConditions": {
+    "compute.instances.create": [
+      "To create the health check instance."
+    ],
+    "compute.instances.delete": [
+      "To delete the health check instance once the check finishes."
+    ],
+    "compute.instances.getSerialPortOutput": [
+      "To get the health check results from the instance's serial port."
+    ],
+    "compute.instances.setMetadata": [
+      "To set the health check scripts as the instance's startup script."
+    ],
+    "container.clusters.delete": [
+      "To delete the exocompute GKE cluster when it is torn down or its setup fails."
+    ],
+    "container.clusters.get": [
+      "To get the state and settings of the exocompute GKE cluster."
+    ],
+    "container.clusters.getCredentials": [
+      "To get the credentials of the cluster, so it can be logged in to for troubleshooting."
+    ],
+    "container.clusters.update": [
+      "To update the cluster so it goes private, by removing its public endpoint once setup finishes."
+    ]
+  },
   "Conditions": [
     "resource.name.extract('clusters/{resourceName}').startsWith('rubrik')",
     "resource.name.extract('instances/{resourceName}').startsWith('rubrik')"
   ],
   "Services": [
-    "ARTIFACT_REGISTRY",
-    "CLOUDRUN",
     "COMPUTE_ENGINE_API",
-    "CONTAINER"
+    "ARTIFACT_REGISTRY",
+    "CONTAINER",
+    "CLOUDRUN"
   ]
 }

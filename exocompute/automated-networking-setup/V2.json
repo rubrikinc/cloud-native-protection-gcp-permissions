@@ -1,29 +1,71 @@
 {
-  "PermissionsWithoutConditions": [
-    "compute.firewalls.create",
-    "compute.networks.access",
-    "compute.networks.create",
-    "compute.networks.delete",
-    "compute.networks.get",
-    "compute.networks.update",
-    "compute.networks.updatePolicy",
-    "compute.networks.use",
-    "compute.routers.create",
-    "compute.routers.delete",
-    "compute.routers.get",
-    "compute.routers.update",
-    "compute.subnetworks.create",
-    "compute.subnetworks.delete",
-    "compute.subnetworks.get",
-    "compute.subnetworks.update",
-    "compute.subnetworks.use",
-    "compute.subnetworks.expandIpCidrRange"
-  ],
-  "PermissionsWithConditions": [
-    "compute.firewalls.delete",
-    "compute.firewalls.get",
-    "compute.firewalls.update"
-  ],
+  "PermissionsWithoutConditions": {
+    "compute.firewalls.create": [
+      "To create the firewall rules that allow traffic to and from the exocompute cluster."
+    ],
+    "compute.networks.access": [
+      "To access the VPC network, so the cluster nodes can be created in it."
+    ],
+    "compute.networks.create": [
+      "To create the VPC network that the exocompute cluster runs in."
+    ],
+    "compute.networks.delete": [
+      "To delete the VPC network exocompute created when it is removed."
+    ],
+    "compute.networks.get": [
+      "To get the VPC network, so it can be reused when it already exists."
+    ],
+    "compute.networks.update": [
+      "To update the settings of the VPC network."
+    ],
+    "compute.networks.updatePolicy": [
+      "To update the network firewall policy, which creating, changing and deleting firewall rules requires."
+    ],
+    "compute.networks.use": [
+      "To use the VPC network, so subnets, routers and cluster nodes can be attached to it."
+    ],
+    "compute.routers.create": [
+      "To create the Cloud Router that hosts the NAT for the cluster nodes."
+    ],
+    "compute.routers.delete": [
+      "To delete the Cloud Router exocompute created when it is removed."
+    ],
+    "compute.routers.get": [
+      "To get the Cloud Router, so it can be reused when it already exists."
+    ],
+    "compute.routers.update": [
+      "To update the Cloud Router, so its NAT configuration matches what exocompute needs."
+    ],
+    "compute.subnetworks.create": [
+      "To create the subnet, with secondary ranges for pods, that the cluster nodes use."
+    ],
+    "compute.subnetworks.delete": [
+      "To delete the subnet exocompute created when it is removed."
+    ],
+    "compute.subnetworks.expandIpCidrRange": [
+      "To update the subnet primary IP range, so the cluster has enough node addresses."
+    ],
+    "compute.subnetworks.get": [
+      "To get the subnet, so it can be reused and its IP ranges reconciled."
+    ],
+    "compute.subnetworks.update": [
+      "To update the subnet secondary IP ranges, so the cluster has enough pod addresses."
+    ],
+    "compute.subnetworks.use": [
+      "To use the subnet for the nodes of the exocompute cluster."
+    ]
+  },
+  "PermissionsWithConditions": {
+    "compute.firewalls.delete": [
+      "To delete the firewall rules exocompute created when it is removed."
+    ],
+    "compute.firewalls.get": [
+      "To get a firewall rule exocompute created, so it can be reused or checked."
+    ],
+    "compute.firewalls.update": [
+      "To update a firewall rule exocompute created, such as the Rubrik addresses it allows."
+    ]
+  },
   "Conditions": [
     "resource.name.extract('firewalls/{resourceName}').startsWith('rubrik-exo')"
   ],
