@@ -16,10 +16,10 @@
       "To get the VPC network, so it can be reused when it already exists."
     ],
     "compute.networks.update": [
-      "To update the VPC network, so its settings match what exocompute needs."
+      "To update the settings of the VPC network."
     ],
     "compute.networks.updatePolicy": [
-      "To update the network firewall policy, which creating firewall rules requires."
+      "To update the network firewall policy, which creating, changing and deleting firewall rules requires."
     ],
     "compute.networks.use": [
       "To use the VPC network, so subnets, routers and cluster nodes can be attached to it."

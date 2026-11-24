@@ -1,7 +1,7 @@
 {
   "PermissionsWithoutConditions": {
     "cloudsql.backupRuns.get": [
-      "To get the status and details of a backup."
+      "To get the status and details of the backup that is restored into the temporary instance."
     ],
     "cloudsql.instances.restoreBackup": [
       "To restore a backup run into the temporary instance."
@@ -10,7 +10,7 @@
       "To get the status of a long-running operation, such as creating an instance."
     ],
     "cloudsql.users.create": [
-      "To create a database user on the temporary instance."
+      "To create the dedicated archival database user on the temporary instance."
     ],
     "cloudsql.users.update": [
       "To update a database user on the temporary instance."
@@ -36,10 +36,10 @@
   },
   "PermissionsWithConditions": {
     "cloudsql.backupRuns.create": [
-      "To create an on-demand backup of an instance."
+      "To create a backup of an instance that Rubrik created."
     ],
     "cloudsql.backupRuns.delete": [
-      "To delete a backup that exocompute created, once it is no longer needed."
+      "To delete a backup of an instance that Rubrik created."
     ],
     "cloudsql.instances.create": [
       "To create the temporary instance that a backup is restored into during archival."
@@ -48,7 +48,7 @@
       "To delete the temporary instance once archival finishes."
     ],
     "cloudsql.instances.get": [
-      "To get an instance, so its state can be checked during a restore."
+      "To get the temporary instance, so its state and private IP address can be read."
     ]
   },
   "Conditions": [

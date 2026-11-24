@@ -1,22 +1,22 @@
 {
   "PermissionsWithoutConditions": {
     "autoscaling.sites.writeMetrics": [
-      "To write the autoscaling metrics that the cluster nodes report."
+      "To write the autoscaling metrics of the cluster nodes, when a customer service account runs them."
     ],
     "compute.disks.create": [
-      "To create the disks that exocompute uses to restore or archive protected data."
+      "To create a disk from a snapshot, so an exocompute task can read the snapshot data."
     ],
     "compute.disks.createSnapshot": [
-      "To create a snapshot of a disk, so its data can be protected."
+      "To create a snapshot of a disk for an archival task."
     ],
     "compute.disks.delete": [
-      "To delete a disk exocompute created, once it is no longer needed."
+      "To delete the disk of an exocompute task once the task finishes."
     ],
     "compute.disks.get": [
-      "To get a disk, so an unused name can be chosen for a new disk."
+      "To get a disk by name, so a unique name is chosen for a new disk."
     ],
     "compute.disks.list": [
-      "To list the disks in the project, so the disks of an instance can be found."
+      "To list the disks in the project, as part of detaching a disk from an instance."
     ],
     "compute.disks.setLabels": [
       "To set labels on a disk, so Rubrik can identify it."
@@ -28,13 +28,13 @@
       "To get the status of global operations, such as creating a network."
     ],
     "compute.instances.detachDisk": [
-      "To detach a disk from an instance during a restore."
+      "To detach a disk that is still attached to an instance, so the disk can be deleted."
     ],
     "compute.instances.get": [
-      "To get an instance, so the disks attached to it can be found before they are detached."
+      "To get the instance a disk is attached to, so the disk can be detached before it is deleted."
     ],
     "compute.instances.setLabels": [
-      "To set labels on an instance, so Rubrik can identify it."
+      "To set labels on the instances that exocompute launches."
     ],
     "compute.networks.list": [
       "To list the VPC networks that exocompute can be set up on."
@@ -46,13 +46,13 @@
       "To get the status of regional operations, such as creating a subnet."
     ],
     "compute.snapshots.create": [
-      "To create a snapshot of a disk."
+      "To create a snapshot of a disk for an archival task."
     ],
     "compute.snapshots.delete": [
-      "To delete a snapshot once it is no longer needed."
+      "To delete a snapshot that an archival task created."
     ],
     "compute.snapshots.get": [
-      "To get the status and details of a snapshot."
+      "To get the status and details of a snapshot that an archival task uses."
     ],
     "compute.snapshots.setLabels": [
       "To set labels on a snapshot, so Rubrik can identify it."
@@ -73,7 +73,7 @@
       "To list zones in the region for the health check instance."
     ],
     "container.clusterRoleBindings.create": [
-      "To create the cluster role bindings that give exocompute components cluster-wide access."
+      "To create the cluster role bindings that give the logging and metrics agents cluster-wide access."
     ],
     "container.clusterRoleBindings.delete": [
       "To delete a cluster role binding that exocompute created."
@@ -88,7 +88,7 @@
       "To bind a cluster role that grants more access than Rubrik holds itself."
     ],
     "container.clusterRoles.create": [
-      "To create the cluster roles that exocompute components use."
+      "To create the cluster roles that the logging and metrics agents use."
     ],
     "container.clusterRoles.delete": [
       "To delete a cluster role that exocompute created."
@@ -106,7 +106,7 @@
       "To create the GKE cluster that runs exocompute."
     ],
     "container.configMaps.create": [
-      "To create the config maps that exocompute components read their settings from."
+      "To create the config maps of the logging and metrics agents."
     ],
     "container.configMaps.get": [
       "To get a config map, so it can be reused or checked."
@@ -118,13 +118,13 @@
       "To update a config map that exocompute created."
     ],
     "container.customResourceDefinitions.create": [
-      "To create the custom resource definitions of the add-ons exocompute installs."
+      "To create the custom resource definitions of Kyverno, which verifies container images."
     ],
     "container.customResourceDefinitions.update": [
-      "To update the custom resource definitions of the add-ons exocompute installs."
+      "To update the custom resource definitions of Kyverno, which verifies container images."
     ],
     "container.daemonSets.create": [
-      "To create the daemon sets that run exocompute agents on every node."
+      "To create the daemon sets that run the logging and metrics agents on every node."
     ],
     "container.daemonSets.delete": [
       "To delete a daemon set that exocompute created."
@@ -139,7 +139,7 @@
       "To update a daemon set that exocompute created."
     ],
     "container.deployments.create": [
-      "To create the deployments that run exocompute components."
+      "To create the deployments of the logging and metrics agents."
     ],
     "container.deployments.delete": [
       "To delete a deployment that exocompute created."
@@ -163,10 +163,10 @@
       "To list the Kubernetes events of pods, nodes and namespaces, so failures can be explained."
     ],
     "container.horizontalPodAutoscalers.create": [
-      "To create the autoscalers that scale exocompute add-ons."
+      "To create the autoscaler of the Kyverno image verification controller."
     ],
     "container.horizontalPodAutoscalers.get": [
-      "To get an autoscaler, so it can be reused or checked."
+      "To get the autoscaler of the Kyverno image verification controller."
     ],
     "container.namespaces.create": [
       "To create the namespaces that hold exocompute workloads."
@@ -202,22 +202,22 @@
       "To delete a node object from the cluster."
     ],
     "container.nodes.get": [
-      "To get a node, so its state can be checked."
+      "To get a node, so the health check can check its state."
     ],
     "container.nodes.getStatus": [
-      "To get the status of a node."
+      "To get the status of a node, so the health check can check it."
     ],
     "container.nodes.list": [
-      "To list the nodes in the cluster, so their state can be checked."
+      "To list the nodes of the cluster, so the health check can count them."
     ],
     "container.operations.get": [
       "To get the status of GKE operations, such as creating or deleting a cluster."
     ],
     "container.persistentVolumeClaims.create": [
-      "To create the volume claims that give workloads their storage."
+      "To create the volume claim that gives the pod of an exocompute task its storage."
     ],
     "container.persistentVolumeClaims.delete": [
-      "To delete a volume claim once its workload finishes."
+      "To delete the volume claim of an exocompute task once the task finishes."
     ],
     "container.persistentVolumeClaims.get": [
       "To get a volume claim, so its state can be checked."
@@ -226,25 +226,25 @@
       "To update a volume claim that exocompute created."
     ],
     "container.persistentVolumes.create": [
-      "To create the persistent volumes that back workload storage with disks."
+      "To create the persistent volume that attaches the disk of an exocompute task to its pod."
     ],
     "container.persistentVolumes.delete": [
-      "To delete a persistent volume once its workload finishes."
+      "To delete the persistent volume of an exocompute task once the task finishes."
     ],
     "container.persistentVolumes.get": [
       "To get a persistent volume, so its state can be checked."
     ],
     "container.podDisruptionBudgets.create": [
-      "To create the budgets that keep add-on pods available during node maintenance."
+      "To create the budget that keeps the Kyverno image verification controller available during node maintenance."
     ],
     "container.podDisruptionBudgets.update": [
-      "To update a pod disruption budget that exocompute created."
+      "To update the pod disruption budget of the Kyverno image verification controller."
     ],
     "container.pods.attach": [
       "To attach to a running pod."
     ],
     "container.pods.create": [
-      "To create the pods that run exocompute workloads."
+      "To create the pods that run exocompute tasks, such as archival."
     ],
     "container.pods.delete": [
       "To delete a pod once its workload finishes."
@@ -280,7 +280,7 @@
       "To update the status of a pod."
     ],
     "container.priorityClasses.create": [
-      "To create the priority classes that rank exocompute pods for scheduling."
+      "To create the priority class of system pods, such as the Kyverno image verification controller."
     ],
     "container.replicaSets.create": [
       "To create a replica set."
@@ -304,7 +304,7 @@
       "To update a replica set that exocompute created."
     ],
     "container.roleBindings.create": [
-      "To create the role bindings that give exocompute components access in a namespace."
+      "To create the role bindings that give exocompute and its logging and metrics agents access in a namespace."
     ],
     "container.roleBindings.delete": [
       "To delete a role binding that exocompute created."
@@ -322,7 +322,7 @@
       "To bind a role that grants more access than Rubrik holds itself."
     ],
     "container.roles.create": [
-      "To create the roles that exocompute components use in a namespace."
+      "To create the roles that give exocompute and its logging and metrics agents access in a namespace."
     ],
     "container.roles.delete": [
       "To delete a role that exocompute created."
@@ -340,7 +340,7 @@
       "To update a role that exocompute created."
     ],
     "container.secrets.create": [
-      "To create the secrets that exocompute components use, such as credentials."
+      "To create the secrets that exocompute needs, such as credentials."
     ],
     "container.secrets.get": [
       "To get a secret, so it can be reused or checked."
@@ -352,7 +352,7 @@
       "To update a secret that exocompute created."
     ],
     "container.serviceAccounts.create": [
-      "To create the service accounts that exocompute components run as."
+      "To create the Kubernetes service account that exocompute pods use through workload identity."
     ],
     "container.serviceAccounts.get": [
       "To get a service account, so it can be reused or checked."
@@ -361,7 +361,7 @@
       "To update a service account that exocompute created."
     ],
     "container.services.create": [
-      "To create the services that expose exocompute components inside the cluster."
+      "To create the services of the logging and metrics agents."
     ],
     "container.services.get": [
       "To get a service, so it can be reused or checked."
@@ -376,46 +376,46 @@
       "To update a service that exocompute created."
     ],
     "container.thirdPartyObjects.create": [
-      "To create the custom resources of the add-ons exocompute installs, such as policies."
+      "To create custom resources, such as the image verification policies of Kyverno and network policies."
     ],
     "container.thirdPartyObjects.get": [
-      "To get a custom resource, so it can be reused or checked."
+      "To get a custom resource, such as the FQDN network policy, so it can be reused or checked."
     ],
     "container.thirdPartyObjects.update": [
-      "To update the custom resources of the add-ons exocompute installs."
+      "To update custom resources, such as the image verification policies of Kyverno and network policies."
     ],
     "gkehub.gateway.delete": [
-      "To delete resources on the cluster through the Connect gateway."
+      "To delete resources through the Connect gateway when an operation is undone."
     ],
     "gkehub.gateway.get": [
-      "To get resources on the cluster through the Connect gateway."
+      "To get the status of the Connect gateway to the cluster."
     ],
     "gkehub.gateway.patch": [
-      "To patch resources on the cluster through the Connect gateway."
+      "To patch resources through the Connect gateway, such as when setting up Kyverno or other custom resource definitions."
     ],
     "gkehub.gateway.post": [
-      "To create resources on the cluster through the Connect gateway."
+      "To create resources through the Connect gateway, such as namespaces, deployments and roles."
     ],
     "gkehub.gateway.put": [
-      "To put resources on the cluster through the Connect gateway."
+      "To put updated resources through the Connect gateway."
     ],
     "iam.serviceAccounts.actAs": [
-      "To attach the node service account to the cluster nodes."
+      "To use the node service account, so GKE can launch the cluster nodes as it."
     ],
     "logging.logEntries.create": [
-      "To write the logs of the cluster nodes to Cloud Logging."
+      "To write the logs of the cluster nodes to Cloud Logging, when a customer service account runs them."
     ],
     "monitoring.metricDescriptors.create": [
-      "To create the metric descriptors that the cluster nodes use."
+      "To create the metric descriptors of the cluster nodes, when a customer service account runs them."
     ],
     "monitoring.metricDescriptors.list": [
-      "To list the metric descriptors, so the cluster nodes can check what exists."
+      "To list the metric descriptors of the cluster nodes, when a customer service account runs them."
     ],
     "monitoring.timeSeries.create": [
-      "To write the metrics of the cluster nodes to Cloud Monitoring."
+      "To write the metrics of the cluster nodes to Cloud Monitoring, when a customer service account runs them."
     ],
     "monitoring.timeSeries.list": [
-      "To list the metrics of the cluster nodes."
+      "To list the metrics of the cluster nodes, when a customer service account runs them."
     ]
   },
   "PermissionsWithConditions": {
@@ -438,16 +438,16 @@
       "To get the state and settings of the exocompute GKE cluster."
     ],
     "container.clusters.getCredentials": [
-      "To get the endpoint and credentials of the cluster, so exocompute can connect to it."
+      "To get the credentials of the cluster, so it can be logged in to for troubleshooting."
     ],
     "container.clusters.update": [
-      "To update the cluster, such as removing its public endpoint once setup finishes."
+      "To update the cluster so it goes private, by removing its public endpoint once setup finishes."
     ],
     "gkehub.memberships.create": [
       "To create the fleet membership that lets the private cluster be reached through the Connect gateway."
     ],
     "gkehub.memberships.delete": [
-      "To delete the fleet membership of the cluster when it is removed."
+      "To delete the fleet membership of the cluster when it is deregistered."
     ]
   },
   "Conditions": [
